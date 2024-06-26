@@ -1,9 +1,10 @@
 import './App.css'
+import CardWrapper from './Components/CardWrapper'
 
 function App() {
   return (
     <>
-      <h1>Hello World!</h1>
+      <CardWrapper />
     </>
   )
 }
