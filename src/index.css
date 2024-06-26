@@ -4,6 +4,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  color: #ffffff;
 }
 
 .wrapper{
@@ -12,7 +13,6 @@ body {
   grid-template-columns: repeat(3, 1fr);
   height: 100vh;
 }
-
 
 .card{
   grid-column: 1/2;
@@ -25,24 +25,70 @@ body {
 }
 
 .card-front{
-  width: 300px;
+  width:50vw;
   height: 30vh;
   background-image: url(./assets/bg-card-front.png);
   background-size: cover;
   border-radius: 5px;
   position: absolute;
-  left: 30%;
+  left: 20%;
   top: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  justify-content: space-between;
+}
+
+.circle{
+  width: 90%;
+  margin:10px auto;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.circle >div:first-child{
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.circle >div:last-child{
+  width: 10px;
+  height: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+}
+
+.card-details{
+  padding: 20px;
+}
+
+.card-details >div:first-child {
+  width: 100%;
+  font-size: 20px;
+  border: none;
+  color: #ffffff;
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+.card-details >div:last-child{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .card-back{
-  width: 300px;
+  width: 50vw;
   height: 30vh;
   background-image: url(./assets/bg-card-back.png);
   background-size: cover;
   border-radius: 5px;
   position: absolute;
-  left: 50%;
+  left: 40%;
   top: 50%;
   margin-top: 20px;
   display: flex;
@@ -54,6 +100,7 @@ body {
   color: #ffffff;
   margin-top: 8px;
   font-style: italic;
+  text-align: right;
 }
 
 .form{
@@ -64,3 +111,61 @@ body {
   align-items: center;
 }
 
+@media screen and (max-width:680px) {
+  .wrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 100vh;
+  }
+
+  .card{
+    grid-column: 1/2;
+    grid-row: 1/ span 1;
+    background-image: url(./assets/bg-main-mobile.png);
+    background-size: cover;
+    position: relative; 
+    display: flex;  
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-front{
+    width: 45vw;
+    min-width: 250px;
+    height: 25vh;
+    background-image: url(./assets/bg-card-front.png);
+    background-size: cover;
+    border-radius: 5px;
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    z-index: 2;
+  }
+  
+  .card-back{
+    width:45vw;
+    min-width: 250px;
+    height: 25vh;
+    background-image: url(./assets/bg-card-back.png);
+    background-size: cover;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .form{
+    grid-column: 1/2;
+    grid-row: 2/ span 2;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

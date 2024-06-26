@@ -3,6 +3,7 @@ const CardBack = ()=>{
         <div className="card-back">
             <span></span>        
             <span></span>        
+            <span></span>        
             <span>000</span>        
         </div>
     )
