@@ -1,7 +1,9 @@
 const CardBack = ()=>{
     return (
         <div className="card-back">
-            <h1>Card Back</h1>        
+            <span></span>        
+            <span></span>        
+            <span>000</span>        
         </div>
     )
 }
